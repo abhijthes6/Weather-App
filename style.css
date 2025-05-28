@@ -1,0 +1,242 @@
+:root {
+    /* Weather images */
+    --sunny: url('https://cdn-icons-png.flaticon.com/128/1163/1163662.png');
+    --cloud: url('https://cdn-icons-png.flaticon.com/128/414/414927.png');
+    --rain: url('https://cdn-icons-png.flaticon.com/128/4724/4724094.png');
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather', serif;
+}
+
+.landing{
+    width: 100vw;
+    height: 80vh;
+    position: absolute;
+    top: 20vh;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.landingImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.landingText h2 {
+    color: rgb(255, 255, 255);
+    text-shadow: grey 0px 0px 10px;
+    font-size: 2rem;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.landing img {
+    width: 30%;
+}
+
+
+.hidden{
+    opacity: 0;
+}
+.conteiner {
+    height: 100vh;
+    background: linear-gradient(to bottom left, rgba(14, 30, 70, 0.653), rgba(26, 67, 98, 0.695), rgba(33, 77, 94, 0.727), #294b52b1),url('images/search-bg.jpg');
+}
+
+.search {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    padding-top: 30px;
+}
+
+#searchInput {
+    font-weight: bolder;
+    width: 40%;
+    height: 40px;
+    border-radius: 20px;
+    padding-left: 20px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    opacity: 0.8;
+    background-image: url('images/search-bg2.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: all 0.8s ease-in-out;
+
+}
+
+#searchInput:focus {
+    font-weight: bolder;
+    background: opacity(0.4);
+    background-size: 150%;
+}
+.main{
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+    align-items: center;
+}
+#searchButton {
+    width: 40px;
+    height: 40px;
+    font-size: larger;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-image: url('images/search-bg2.jpg');
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    margin-left: 10px;
+}
+/* weather text styles */
+.weather-text {
+    padding-top: 0px;
+    padding-bottom: 40px;
+    color: white;
+    height: 100%;
+    font-size: 1.8rem;
+    line-height: .5;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.temp{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+}
+#temp{
+    color: white;
+    font-size: 100px;
+    font-weight: bolder;
+    margin: 0 0px;
+}
+
+/* weather- image  */
+.weather-image{
+    width: 30%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.weather-image img{
+    width: 300px;
+    margin: 0;
+}
+
+/* other details  */
+.others{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0 60px;
+}
+.other{
+    width: 15%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(56, 56, 56);
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+.other img{
+    height: 30%;
+}
+
+
+@media (max-width: 768px) {
+    .conteiner {
+        height: 100vh;
+    }
+    .search {
+        height: 15%;
+    }
+    .main{
+        height: 30%;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+    .weather-image{
+        align-items: start;
+    }
+    #searchInput {
+        width: 75%;
+    }
+    .other{
+        width: 25%;
+        font-size: 0.7rem;
+    }
+    .others{
+        padding: 0 20px;
+        gap: 40px;
+    }
+}
+
+/* media queries */
+@media (max-width: 440px) {
+    body{
+        font-size: smaller;
+    }
+    .conteiner {
+        height: 100vh;
+    }
+    .search {
+        height: 15%;
+    }
+    .main{
+        height: 30%;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+    .weather-image{
+        align-items: start;
+    }
+    #searchInput {
+        width: 75%;
+    }
+    .other{
+        width: 25%;
+        font-size: 0.7rem;
+    }
+    .others{
+        padding: 0 20px;
+        gap: 40px;
+    }
+    .details{
+        font-size: 1.2rem;
+        margin-top: 30px;
+    }
+    #temp{
+        font-size: 60px;
+    }
+    .landing img{
+        width: 60%;
+    }
+}

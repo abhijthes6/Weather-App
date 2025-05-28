@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="conteiner">
+
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Enter city name">
+            <button id="searchButton">&#128269;</button>
+        </div>
+        <div class="main hidden">
+            <div class="weather-text">
+                <div class="details">
+                    <h1 id="cityName">City Name</h1>
+                    <p id="desc">Weather Description</p>
+                </div>
+                <div class="temp">
+                    <h1 id="temp">26°C</h1>
+                </div>
+            </div>
+            <div class="weather-image">
+                <img id="weatherImage" src="https://cdn-icons-png.flaticon.com/128/4724/4724094.png" alt="" srcset="">
+            </div>
+            
+        </div>
+        <div class="others hidden">
+            <div class="other pressure">
+                <h3>Pressure</h3>
+                <img src="https://cdn-icons-png.flaticon.com/128/13882/13882603.png" alt="">
+                <h2 id="pressure">data</h2>
+            </div>
+            <div class="other humidity">
+                <h3>Humidity</h3>
+                <img src="https://cdn-icons-png.flaticon.com/128/18664/18664925.png" alt="">
+                <h2 id="humidity">data</h2>
+            </div>
+            <div class="other Grnd_level">
+                <h3>Grnd Level</h3>
+                <img src="https://cdn-icons-png.flaticon.com/128/4005/4005826.png" alt="">
+                <h2 id="grndLevel">data</h2>
+            </div>
+            <div class="other visibility">
+                <h3>Visibility</h3>
+                <img src="https://cdn-icons-png.flaticon.com/128/5263/5263154.png" alt="">
+                <h2 id="visibility">data</h2>
+            </div>
+            <div class="other wind-speed">
+                <h3>Wind Speed</h3>
+                <img src="https://cdn-icons-png.flaticon.com/128/5532/5532989.png" alt="">
+                <h2 id="windSpeed">data</h2>
+            </div>
+        </div>
+                <div class="landing">
+            <div class="landingText">
+                <h2>Check weather by City Name!</h2>
+            </div>
+            <div class="landingImage">
+                <img src="images/landingIMg.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
