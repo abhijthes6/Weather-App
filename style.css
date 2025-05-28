@@ -106,12 +106,12 @@ body {
 }
 /* weather text styles */
 .weather-text {
-    padding-top: 0px;
-    padding-bottom: 40px;
+    margin: 0;
+    padding: 0px;
     color: white;
     height: 100%;
     font-size: 1.8rem;
-    line-height: .5;
+    line-height: 1;
     font-weight: bolder;
     display: flex;
     flex-direction: column;
@@ -213,10 +213,13 @@ body {
         height: 30%;
         justify-content: center;
         align-items: center;
-        gap: 40px;
+        gap: 70px;
     }
     .weather-image{
         align-items: start;
+    }
+    .weather-image img{
+        width: 200px;
     }
     #searchInput {
         width: 75%;
@@ -230,9 +233,15 @@ body {
         gap: 40px;
     }
     .details{
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin-top: 30px;
     }
+ #cityName{
+    height: 40%;
+    line-height: 30px;
+    margin: 0;
+ }
+
     #temp{
         font-size: 60px;
     }

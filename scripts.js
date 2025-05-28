@@ -4,6 +4,7 @@ const apiUrl = 'https://api.openweathermap.org/data/2.5/weather';
 const maindiv = document.querySelector('.main');
 const othersdiv = document.querySelector('.others');
 const landing = document.querySelector('.landing');
+const landingtext = document.querySelector('#landingtext');
 const input = document.querySelector('#searchInput');
 const search = document.querySelector('#searchButton');
 const cityName = document.querySelector('#cityName');
@@ -46,12 +47,16 @@ const fetchWeather = async (city) => {
             landing.classList.add('hidden');
             changedata(data);
         }else{
+            maindiv.classList.add('hidden');
+            othersdiv.classList.add('hidden');  
+            landing.classList.remove('hidden');
+            landingtext.innerHTML = 'City not found, please try again.';
             console.error('Error fetching weather data:', response.statusText);
         }
 }
 
 const changedata = (data) => {
-    cityName.innerHTML = data.name+ ', ' + data.sys.country;
+    cityName.innerHTML = data.name + ', ' + data.sys.country;
     desc.innerHTML = data.weather[0].description;
     temp.innerHTML = `${Math.round(data.main.temp)}°C`;
     other.pressure.innerHTML = `${data.main.pressure} hPa`;
